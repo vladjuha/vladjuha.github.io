@@ -36,7 +36,7 @@
                 write("Congrats!!!");
                 hide("button");
                 hide("userAnswer");
-                //continue; - сразу переходит к следующей итерации
+                
             } else if (tryCount >= maxTryCount) {
                 write("You loos <br> The right answer was: " + answer);
                 hide("button");
@@ -54,9 +54,9 @@
 <body>
     <div class="content">
         <div class="header">
-            <a href="index.html">Главная</a>
-            <a href="puzzle.html">Загадки</a>
-            <a href="guess game.html">Угадайка</a>
+            <a href="index.html">Main</a>
+            <a href="puzzle.html">Guess Game</a>
+            <a href="guess game.html">Guess what</a>
         </div>
         <div class="contentWrap">
 
@@ -64,14 +64,14 @@
 
                 <div class="center">
 
-                    <h1>Игра Угадайка</h1>
+                    <h1>Игра Guess what</h1>
 
                     <div class="box">
 
-                        <p id="info">Угадайте число от 0 до 100</p>
+                        <p id="info">Guess the number from 0 to 100</p>
                         <input type="text" id="userAnswer">
                         <br>
-                        <a href="#" onclick="guess();" id="button">Начать</a>
+                        <a href="#" onclick="guess();" id="button">Start</a>
 
                     </div>
                 </div>
