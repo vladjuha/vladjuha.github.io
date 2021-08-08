@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Site</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript">
+
+
+        var score = 0;
+        function checkAnswer(inputId, answers) {
+            var userAnswer = document.getElementById(inputId).value;
+            userAnswer = userAnswer.toLowerCase();
+            for (var i = 0; i < answers.length; i++) {
+                if (userAnswer == answers[i]) {
+                    score++;
+                    break;
+                }
+            }
+        }
+
+        function checkAnswers() {
+
+            checkAnswer("userAnswer1", ["сон", "сноведения"]);
+            checkAnswer("userAnswer2", ["морской", "укус акулы"]);
+            checkAnswer("userAnswer3", ["шахматный", "мертвый"]);
+
+
+            if (score == 0) {
+                alert("Вы отгадали " + score + " загадок");
+            } else if (score == 1) {
+                alert("Вы отгадали " + score + " загадку");
+            } else {
+                alert("Вы отгадали " + score + " загадоки");
+            }
+        }
+
+    </script>
+</head>
+
+<body>
+    <div class="content">
+        <div class="header">
+            <a href="index.html">Главная</a>
+            <a href="puzzle.html">Загадки</a>
+            <a href="guess game.html">Угадайка</a>
+        </div>
+        <div class="contentWrap">
+
+            <div class="content">
+
+                <div class="center">
+
+                    <h1>Игра в Загадки</h1>
+
+                    <div class="box">
+                        <p>Что можно увидеть с закрытыми глазами?</p>
+                        <input type="text" id="userAnswer1">
+
+                        <p>Какой болезнью никто не болеет на суше?</p>
+                        <input type="text" id="userAnswer2">
+
+                        <p>Какой конь не ест овса?</p>
+                        <input type="text" id="userAnswer3">
+
+                        <br>
+
+                        <a href="#" onclick="checkAnswers();">Ответить</a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+    </div>
+    <div class="footer">
+        Copyright &copy; Vladislav Juhasz
+    </div>
+
+
+</body>
+
+</html>
