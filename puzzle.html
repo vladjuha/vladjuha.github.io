@@ -24,18 +24,12 @@
 
         function checkAnswers() {
 
-            checkAnswer("userAnswer1", ["сон", "сноведения"]);
-            checkAnswer("userAnswer2", ["морской", "укус акулы"]);
-            checkAnswer("userAnswer3", ["шахматный", "мертвый"]);
-
-
-            if (score == 0) {
-                alert("Вы отгадали " + score + " загадок");
-            } else if (score == 1) {
-                alert("Вы отгадали " + score + " загадку");
-            } else {
-                alert("Вы отгадали " + score + " загадоки");
-            }
+            checkAnswer("userAnswer1", ["dream"]);
+            checkAnswer("userAnswer2", ["seasickness"]);
+            checkAnswer("userAnswer3", ["chess"]);
+            
+                alert("You guessed " + score + " riddles");
+           
         }
 
     </script>
@@ -44,9 +38,9 @@
 <body>
     <div class="content">
         <div class="header">
-            <a href="index.html">Главная</a>
-            <a href="puzzle.html">Загадки</a>
-            <a href="guess game.html">Угадайка</a>
+            <a href="index.html">Main</a>
+            <a href="puzzle.html">Guess Game</a>
+            <a href="guess game.html">Guess What</a>
         </div>
         <div class="contentWrap">
 
@@ -57,18 +51,18 @@
                     <h1>Игра в Загадки</h1>
 
                     <div class="box">
-                        <p>Что можно увидеть с закрытыми глазами?</p>
+                        <p>What you can see with closed eyes?</p>
                         <input type="text" id="userAnswer1">
 
-                        <p>Какой болезнью никто не болеет на суше?</p>
+                        <p>What disease does no one get sick on land?</p>
                         <input type="text" id="userAnswer2">
 
-                        <p>Какой конь не ест овса?</p>
+                        <p>What horse doesn't eat oats?</p>
                         <input type="text" id="userAnswer3">
 
                         <br>
 
-                        <a href="#" onclick="checkAnswers();">Ответить</a>
+                        <a href="#" onclick="checkAnswers();">Answear</a>
 
                     </div>
                 </div>
